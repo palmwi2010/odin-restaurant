@@ -1,4 +1,11 @@
 import './style.css';
 
+class Viewport {
+    contentContainer = document.querySelector('#content')
 
-console.log("running");
+    clearScreen() {
+        this.contentContainer.innerHTML = '';
+    }
+}
+
+const viewController = new Viewport();
