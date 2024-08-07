@@ -97,3 +97,74 @@ footer {
     background-color: black;
     color: white;
 }
+
+/* Menu */
+.menu-container {
+    margin: 50px auto;
+    padding: 60px;
+    border-radius: 20px;
+    background-color: #fde68a;
+    border: 2px solid #b45309;
+    box-shadow: 6px 6px 10px 0 black;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+    width: min-content;
+
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.menu-item {
+    display: flex;
+    gap:16px;
+    width: 800px;
+}
+
+.menu-item h2 {
+    font-size: 30px;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.menu-item p {
+    font-size: 16px;
+    color:#525252;
+    margin-top: 8px;
+}
+
+.price {
+    margin-left: auto;
+    font-size: 24px;
+    font-weight: 700;;
+}
+
+.fake-img {
+    width:100px;
+    height:100px;
+    border-radius: 10px;
+    border: 2px solid #fbbf24;
+}
+
+.menu-container::before {
+    content: 'Menu';
+}
+
+/* About container */
+.about-container {
+    margin: 80px auto;
+    background-color: rgba(255,255,255,1);
+    padding: 80px;
+    border-radius: 30px;
+    box-shadow: 6px 6px 10px 0 black;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    width: 80%;
+}
+
+.about-container img {
+    width: min(500px, 100%);
+}
