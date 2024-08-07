@@ -5,7 +5,9 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    static: './dist'
+    static: './dist',
+    watchFiles: ["src/*.html"],
+    hot: true,
   },
   entry: './src/index.js',
   output: {
@@ -15,8 +17,31 @@ module.exports = {
   module: {
     rules: [
         {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader']
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader']
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
+        },
+        {
+          test: /\.html$/,
+          use: [
+            {
+              loader: 'html-loader',
+              options: {
+                sources: {
+                  list: [
+                    {
+                      tag: 'img',
+                      attribute: 'src',
+                      type: 'src',
+                    }
+                  ]
+                }
+              }
+            }
+          ]
         }
     ]
   },

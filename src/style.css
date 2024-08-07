@@ -1,3 +1,99 @@
 * {
-    color: red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --header-background: #3f6212;
+}
+
+body {
+    background-image: url('./pizza.jpg');
+    background-color: rgba(255,255,255,0.4);
+    background-blend-mode: lighten;
+}
+
+header {
+    background-color: black;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    width:20px;
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.content-banner {
+    background-color: var(--header-background);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.content-banner p {
+    margin-top: 8px;
+}
+
+.content-main {
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    justify-content: center;
+    gap: 120px;
+}
+
+.content-pair {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 120px;
+}
+
+.content-item {
+    width: min(300px, 80vw);
+    background-color: #e7e5e4;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    padding: 16px;
+}
+
+.item-header {
+    font-size: 30px;
+}
+
+.content-item p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.content-item:hover {
+    background-color: #1a2e05;
+    color: white;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+    width:100%;
+    background-color: black;
+    color: white;
 }
