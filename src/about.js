@@ -1,5 +1,5 @@
 import {make} from './helpers.js';
-import chefImg from './chef.jpg';
+import chefImg from './assets/chef.jpg';
 
 function initAbout() {
 
